@@ -1,0 +1,1 @@
+export const getLastRolledNumber = (state) => (state.lastRolledNumber);
