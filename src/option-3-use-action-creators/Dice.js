@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { rollDice } from './actionsCreators';
+import { rollDice } from './actionCreators';
 import { connect } from 'react-redux';
 import { getLastRolledNumber } from './selectors';
 
@@ -16,6 +16,8 @@ Dice.propTypes = {
     onRollDice: PropTypes.func.isRequired
 }
 
-export default connect({
+export default connect((state) => ({
     lastRolledNumber: getLastRolledNumber(state)
-}, { rollDice })(Dice);
+}), { 
+    onRollDice: rollDice 
+})(Dice);
