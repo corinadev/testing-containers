@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { rollDice } from '../actions';
 import { connect } from 'react-redux';
 
 const Dice = ({ lastRolledNumber, onRollDice }) => (
@@ -20,7 +19,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    onRollDice: () => dispatch(rollDice())
+    onRollDice: () => dispatch({ type: 'ROLL_DICE' })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dice);
