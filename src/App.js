@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Dice from './option-1-export-mapDispatchToProps-and-mapStateToProps/Dice';
 
